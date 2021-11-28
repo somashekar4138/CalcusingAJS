@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="../angular.min.js"></script>
+    <script type="text/javascript" src="myApp.js"></script>
+    <title>AngularJS Calculator</title>
+</head>
+
+<body ng-controller="calculatorController">
+    <div id="container">
+        <div id="calculator">
+            <div id="result">
+                <div id="history">
+                    <p id="history-value"> {{operationIcon}} </p>
+                </div>
+                <div id="output">
+                    <p id="output-value"> {{ledDisplay}}</p>
+                </div>
+            </div>
+            <div id="keyboard">
+                <button class="operator" ng-click="allClear()">C</button>
+                <button class="operator" ng-click="clearOne()">CE</button>
+                <button class="operator" ng-click="operate('%')">%</button>
+                <button class="operator" ng-click="operate('/')">&#247;</button>
+                <button class="number" ng-click="enterInput(7)">7</button>
+                <button class="number" ng-click="enterInput(8)">8</button>
+                <button class="number" ng-click="enterInput(9)">9</button>
+                <button class="operator" ng-click="operate('*')">&times;</button>
+                <button class="number" ng-click="enterInput(4)">4</button>
+                <button class="number" ng-click="enterInput(5)">5</button>
+                <button class="number" ng-click="enterInput(6)">6</button>
+                <button class="operator" ng-click="operate('-')">-</button>
+                <button class="number" ng-click="enterInput(1)">1</button>
+                <button class="number" ng-click="enterInput(2)">2</button>
+                <button class="number" ng-click="enterInput(3)">3</button>
+                <button class="operator" ng-click="operate('+')">+</button>
+                <button class="number" ng-click="enterInput('00')">00</button>
+                <button class="number" ng-click="enterInput(0)">0</button>
+                <button class="number" ng-click="enterInput('.')">.</button>
+                <button class="operator" ng-click="getResult()">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
